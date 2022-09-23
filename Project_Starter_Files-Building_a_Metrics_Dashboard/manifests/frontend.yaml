@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
       - name: frontend
-        image: 0xramadan/frontend:latest
+        image: ghcr.io/jasonsmithio/backend:v1
         ports:
         - containerPort: 8080
 ---
