@@ -1,17 +1,17 @@
 apiVersion: monitoring.coreos.com/v1
 kind: ServiceMonitor
 metadata:
-  name: frontend
+  name: trial
   namespace: monitoring
   labels:
-    app: frontend
+    app: trial
     release: prometheus
 spec:
   selector:
     matchLabels:
-      app: frontend
+      app: trial
   endpoints:
-  - port: frontend
+  - port: trail
     path: /metrics
     interval: 15s
   namespaceSelector:

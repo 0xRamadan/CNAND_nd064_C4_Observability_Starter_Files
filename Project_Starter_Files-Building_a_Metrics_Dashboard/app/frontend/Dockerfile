@@ -7,6 +7,7 @@ ENV APP_HOME /app
 ENV PROMETHEUS_MULTIPROC_DIR /tmp
 ENV prometheus_multiproc_dir /tmp
 
+
 WORKDIR $APP_HOME
 COPY . ./
 
