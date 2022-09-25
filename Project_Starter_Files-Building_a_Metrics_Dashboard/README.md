@@ -23,7 +23,7 @@ _Done:_ Create a dashboard in Grafana that shows Prometheus as a source. Take a 
 
 ## Describe SLO/SLI
 
-_TODO:_ We want to create an SLO that guarantees that the app has a 99.95% uptime per month.
+_Done_:_ SLI is an indicator of how much we were able to achieve the SLO defined. For monthly uptime SLO, we can have SLI in terms of the duration for which the service remain unavailable, which we could then reduce as much as possible. For request response time SLO, we could average out the request response time, which would then give us the current SLI.
 
 1. we should consider the response to the customer.
 2. we should monitor the Traffic flow of the frontend and more specific to the Backend and Trial API serving the frontend.
@@ -46,7 +46,7 @@ _Done:_
 
 ## Create a Dashboard to measure our SLIs
 
-_Done:_ Create a dashboard to measure the uptime of the frontend and backend services We will also want to measure to measure 40x and 50x errors. Create a dashboard that show these values over a 24 hour period and take a screenshot.
+_Done:_ 
 
 ![SLI-Dashboard](./answer-img/SLI-Dashboard.png)
 
@@ -86,19 +86,21 @@ _Done:_ We want to create an SLO guaranteeing that our application has a 99.95% 
 
 ## Building KPIs for our plan
 
-1. Uptime
+_Done:_ Now that we have our SLIs and SLOs, create a list of 2-3 KPIs to accurately measure these metrics as well as a description of why those KPIs were chosen. We will make a dashboard for this, but first write them down here.
+
+1. Measure the availability of the systems/services (Uptime). The backend and frontend services can be measured.
     * BackEnd-service Up/Down
     * FrontEnd-service Up/Down
     * Kubernetes Uptime
-2. Latency
-    * Avg time of responses
+2. Track the average of 2xx or 3xx responses of the app as a ratio of the overall number of requests.
+    * Average time responses
     * Number of successful request second
 3. Error rate
     * Rate of failed request per sec
     * Error codes for all services 500s & 400s
-4. Resource Usage
-    * Used memory
-    * CPU Usage
+4. Network Bandwidth of Receive / Transmit: This metric indicates the saturation level of the network 
+5. Memory Utilization: This metric will indicate how intensely the memory resources are consumed
+6. CPU Utilization: This metric will indicate the saturation level in our compute power
 
 ## Final Dashboard
 
